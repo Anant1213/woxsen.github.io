@@ -4611,19 +4611,33 @@ We want our students to infuse the world with the energy of their creativity and
 	    }
         
 </script>
-<!--Start of Tawk.to Script-->
+<!-- Start chatbot (script) -->
 <script type="text/javascript">
-	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-	(function(){
-	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-	s1.async=true;
-	s1.src='https://embed.tawk.to/5c790c48a726ff2eea5a16a1/default';
-	s1.charset='UTF-8';
-	s1.setAttribute('crossorigin','*');
-	s0.parentNode.insertBefore(s1,s0);
-	})();
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        // Capture current URL
+        const currentURL = window.location.href;
+
+        // Load Voiceflow chat
+        window.voiceflow.chat.load({
+          verify: { projectID: '671e81721a303b9ba850ddd4' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+	  userID: currentURL
+        });
+      }
+      
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+  })(document, 'script');
 </script>
-<!--End of Tawk.to Script-->
+
+		<!-- End chatbot script -->
+
+
+		
 
         	    	<link rel="preload" as="style" href="https://www.admissionindia.net/assets/front/css/bootstrap.min.css">
 
