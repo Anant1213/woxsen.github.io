@@ -4612,22 +4612,30 @@ We want our students to infuse the world with the energy of their creativity and
         
 </script>
 
-	<!-- Start chatbot (script) -->
+<!-- Start chatbot (script) -->
 <script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
+        // Capture current URL
+        const currentURL = window.location.href;
+
+        // Load Voiceflow chat
         window.voiceflow.chat.load({
-          verify: { projectID: '673c38e682bd9874372a2c16' },
+	  verify: { projectID: '673c38e682bd9874372a2c16' },
           url: 'https://general-runtime.voiceflow.com',
-          versionID: 'production'
+          versionID: 'production',
+	  userID: currentURL
         });
       }
-      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
   })(document, 'script');
 </script>
-		<!-- End chatbot script -->
 
+		<!-- End chatbot script -->
 
 		
 
